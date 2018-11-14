@@ -51,7 +51,7 @@ namespace Jeu2Des
            
         }
 
-        public abstract void Load(string rec);
+        public abstract void Load();
 
         public abstract void Save();
        

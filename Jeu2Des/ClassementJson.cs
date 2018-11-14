@@ -11,10 +11,8 @@ namespace Jeu2Des
 {
     public class ClassementJson :Classement
     {
-        public override void Load(string rec)
+        public override void Load()
         {
-            if(rec=="json")
-            {
                 if (File.Exists("seri.xml"))
                 {
                     Stream fichier = File.OpenRead("seri.xml");
@@ -27,7 +25,6 @@ namespace Jeu2Des
                     this.Entrees = ((Classement)obj).Entrees;
                     fichier.Close();
                 }
-            }
         }
         public override void Save()
         {

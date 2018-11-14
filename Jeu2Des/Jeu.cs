@@ -42,7 +42,7 @@ namespace Jeu2Des
             _Des[1] = new De();
 
             _Classement=Fabrique.GetClassement(st);
-            _Classement.Load(st);
+            _Classement.Load();
         }
 
         /// <summary>

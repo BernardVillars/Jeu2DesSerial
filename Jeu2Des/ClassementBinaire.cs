@@ -12,10 +12,8 @@ namespace Jeu2Des
     public class ClassementBinaire : Classement
     {
 
-        public override void Load(string rec)
+        public override void Load()
         {
-            if (rec=="binaire")
-            {
 
             if (File.Exists("seri.txt"))
             {
@@ -29,7 +27,6 @@ namespace Jeu2Des
                 // je récupère le ou les atributs de l'objet que je désérialize et j'affecte leur valeur a leur attribut respectifs
                 this.Entrees = ((Classement)obj).Entrees;
                 fichier.Close();
-            }
             }
         }
     
