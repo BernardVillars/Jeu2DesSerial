@@ -75,7 +75,6 @@ namespace Jeu2Des
             _Joueur.Jouer(_Des);
             _Classement.AjouterEntree(Joueur.Nom, Joueur.Score);
           
-
         }
        
         public void MeilleursScore()
@@ -90,19 +89,7 @@ namespace Jeu2Des
         {
             if (sauvegarde)
             {
-                if (_Classement is ClassementBinaire)
-                {
-                    _Classement.Save();
-                }
-                if (_Classement is ClassementXml)
-                {
-                    _Classement.Save();
-                }
-                if (_Classement is ClassementJson)
-                {
-                    _Classement.Save();
-                }
-
+                _Classement.Save();             
             }
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,10 @@ namespace Jeu2Des
 {
     // On a sortie la class Entree pour déléguer les tâches et sérialiser
     [Serializable]
+    [DataContract]
     public abstract class Classement
     {
+        [DataMember]
         private List<Entree> _Entrees = new List<Entree>();
  
 

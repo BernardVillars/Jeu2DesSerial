@@ -6,31 +6,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 
 namespace Jeu2Des
 {
+    [DataContract]
     public class ClassementJson :Classement
     {
         public override void Load()
         {
-                if (File.Exists("seri.xml"))
-                {
-                    Stream fichier = File.OpenRead("seri.xml");
-                    XmlSerializer serializer = new XmlSerializer(typeof(ClassementXml));
-                    Object obj = serializer.Deserialize(fichier);
+            if (File.Exists("seri.json"))
+            {
+                Stream fichier = File.OpenRead("seri.json");
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Entree>));
+                List<Entree> listRecup = (List<Entree>)serializer.ReadObject(fichier);
 
-                    //L'objet récupéré doit être casté dans sa classe pour qu'on puisse accéder à ces méthodes
-                    Console.WriteLine(obj);
-                    // je récupère le ou les atributs de l'objet que je désérialize et j'affecte leur valeur a leur attribut respectifs
-                    this.Entrees = ((Classement)obj).Entrees;
-                    fichier.Close();
-                }
+                this.Entrees = listRecup;
+                fichier.Close();
+            }
         }
         public override void Save()
         {
-            Stream fichier = File.Create("seri.txt");
-            BinaryFormatter serial = new BinaryFormatter();
-            serial.Serialize(fichier, this);
+            Stream fichier = File.Create("seri.json");
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Entree>));
+            serializer.WriteObject(fichier,this.Entrees);
             fichier.Close();
         }
         public override string ToString()

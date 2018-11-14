@@ -12,7 +12,7 @@ namespace Programme
         static void Main(string[] args)
         {
             //Le jeu est crée (avec ses 2 des et son classement)
-            Jeu MonJeu = new Jeu("binaire");
+            Jeu MonJeu = new Jeu("json");
            
             //MonJeu.Load();
             //Jouons quelques parties ....

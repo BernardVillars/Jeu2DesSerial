@@ -28,6 +28,7 @@ namespace Jeu2Des
                 this.Entrees = ((Classement)obj).Entrees;
                 fichier.Close();
             }
+
         }
     
     public override void Save()

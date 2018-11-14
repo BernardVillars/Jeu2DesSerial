@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Jeu2Des
 {
 
     [Serializable]
+    [DataContract]
     public class Entree : IComparable
     {
+        [DataMember]
         private string _NomJoueur;
         public string NomJoueur
 
@@ -16,6 +19,7 @@ namespace Jeu2Des
             get { return _NomJoueur; }
             set { _NomJoueur = value; }
         }
+        [DataMember]
         private int _Score;
         public int Score
 
