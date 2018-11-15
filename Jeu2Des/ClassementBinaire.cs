@@ -30,14 +30,14 @@ namespace Jeu2Des
             }
 
         }
-    
-    public override void Save()
-    {
-        Stream fichier = File.Create("seri.txt");
-        BinaryFormatter serial = new BinaryFormatter();
-        serial.Serialize(fichier, this);
-        fichier.Close();
-    }
+
+        public override void Save()
+        {
+            Stream fichier = File.Create("seri.txt");
+            BinaryFormatter serial = new BinaryFormatter();
+            serial.Serialize(fichier, this);
+            fichier.Close();
+        }
         public override string ToString()
         {
             return $"Jeu de dés sérialisable en binaire";

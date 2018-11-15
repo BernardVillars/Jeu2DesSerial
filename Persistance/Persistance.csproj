@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5786193D-E97D-42D5-B895-E2939B8EF0B0}</ProjectGuid>
+    <ProjectGuid>{54B0D515-CDA5-47E3-8F2E-D3ABB9EFB2D5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Jeu2Des</RootNamespace>
-    <AssemblyName>Jeu2Des</AssemblyName>
+    <RootNamespace>Persistance</RootNamespace>
+    <AssemblyName>Persistance</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,23 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classement.cs" />
-    <Compile Include="ClassementBinaire.cs" />
-    <Compile Include="ClassementJson.cs" />
-    <Compile Include="ClassementXml.cs" />
-    <Compile Include="De.cs" />
-    <Compile Include="Entree.cs" />
-    <Compile Include="Fabrique.cs" />
-    <Compile Include="Jeu.cs" />
-    <Compile Include="Joueur.cs" />
+    <Compile Include="Ipersistance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypePersistance.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Persistance\Persistance.csproj">
-      <Project>{54b0d515-cda5-47e3-8f2e-d3abb9efb2d5}</Project>
-      <Name>Persistance</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

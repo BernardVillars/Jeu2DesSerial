@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Persistance;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,7 +18,6 @@ namespace Jeu2Des
     {
         [DataMember]
         private List<Entree> _Entrees = new List<Entree>();
- 
 
         public List<Entree> Entrees
         {
@@ -57,7 +57,7 @@ namespace Jeu2Des
         public abstract void Load();
 
         public abstract void Save();
-       
+
 
     }
 }

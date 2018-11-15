@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Persistance;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,23 +9,14 @@ namespace Jeu2Des
 {
     static class Fabrique
     {
-        public static Classement GetClassement(string cl)
+        public static Classement CreerPersistance(TypePersistance type)
         {
-            if (cl=="binaire")
-            {
-                return new ClassementBinaire();
-            }
-            if (cl=="xml")
-            {
+            if (type == TypePersistance.Xml)
                 return new ClassementXml();
-            }
-            if (cl=="json")
-            {
+            if (type == TypePersistance.Json)
                 return new ClassementJson();
-            }
-            return null;
-
+            return new ClassementBinaire();
         }
-        
+
     }
 }

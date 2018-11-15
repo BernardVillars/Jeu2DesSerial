@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Persistance;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,18 +34,16 @@ namespace Jeu2Des
         /// <summary>
         /// Crée un jeu de 2 Dés avec un classement
         /// </summary> 
-        public Jeu(string st)
+        public Jeu(TypePersistance type)
 
         {
             //A la création du jeu : les 2 dés sont crées 
             //On aurait pu créer les 2 Des juste au moment de jouer  
             _Des[0] = new De();
             _Des[1] = new De();
-
-            _Classement=Fabrique.GetClassement(st);
+            _Classement = Fabrique.CreerPersistance(type);
             _Classement.Load();
         }
-
         /// <summary>
         /// Permet de faire une partie du jeu de dés en indiquant le nom du joueur
         /// </summary>

@@ -14,6 +14,7 @@ namespace Jeu2Des
     [DataContract]
     public class ClassementJson :Classement
     {
+
         public override void Load()
         {
             if (File.Exists("seri.json"))
@@ -30,7 +31,7 @@ namespace Jeu2Des
         {
             Stream fichier = File.Create("seri.json");
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Entree>));
-            serializer.WriteObject(fichier,this.Entrees);
+            serializer.WriteObject(fichier, this.Entrees);
             fichier.Close();
         }
         public override string ToString()
