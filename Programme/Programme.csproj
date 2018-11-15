@@ -54,10 +54,6 @@
       <Project>{5786193d-e97d-42d5-b895-e2939b8ef0b0}</Project>
       <Name>Jeu2Des</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Persistance\Persistance.csproj">
-      <Project>{54b0d515-cda5-47e3-8f2e-d3abb9efb2d5}</Project>
-      <Name>Persistance</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,5 @@
 ﻿using Jeu2Des;
 using System;
-using Persistance;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
