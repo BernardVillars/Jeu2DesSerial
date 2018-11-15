@@ -24,7 +24,6 @@ namespace Programme
             MonJeu.JouerPartie(); //Encore une partie 
             MonJeu.MeilleursScore();
             MonJeu.terminer();
-            Console.Write("bravo");
             Console.ReadKey();
         }
     }
