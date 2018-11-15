@@ -13,8 +13,6 @@ namespace Programme
         {
             //Le jeu est crée (avec ses 2 des et son classement)
             Jeu MonJeu = new Jeu(TypePersistance.Xml);
-           
-            //MonJeu.Load();
             //Jouons quelques parties ....
 
             MonJeu.JouerPartie(); //1ere partie avec un joueur par défaut
@@ -26,6 +24,7 @@ namespace Programme
             MonJeu.JouerPartie(); //Encore une partie 
             MonJeu.MeilleursScore();
             MonJeu.terminer();
+            Console.Write("bravo");
             Console.ReadKey();
         }
     }
